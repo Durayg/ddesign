@@ -336,11 +336,12 @@ a:hover::after{
 }
 
 #theme-select:checked ~ .wrapper header .hero h1{
-    background: linear-gradient(to right,black, white);
+    /*background: linear-gradient(to right,black, white);
     background-clip: border-box;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;*/
     transition: all .3s ease-in-out;
+    color: white;
 }
 
 #theme-select:checked ~ .wrapper header nav .btn{
