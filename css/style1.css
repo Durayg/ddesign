@@ -510,9 +510,9 @@ header .hero h1{
     opacity: 0;
     transition: all .5s ease-in-out;
     font-family: 'Michroma', sans-serif;
-    background: linear-gradient(black, white);
+    /*background: linear-gradient(black, white);
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;*/
     font-size: 3.5rem;
     letter-spacing: 5px;
 }
