@@ -1,4 +1,5 @@
-
+/*CSAK AZ INDEX.HTML ÉS A STYLE.CSS LETT JAVÍTVA, A Z INDEX1.HTML ÉS STYLE1.CSS JAVÍTANDÓ*/
+/*a LANDSCAPE MÓDOT JAVÍTANI KELL! 576PX FELETT*/
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Shadows+Into+Light&display=swap');
 
 *, ::before, ::after{
@@ -11,7 +12,7 @@
 .wrapper{
     background-image: url(../img/office1.jpg);
     background-size: cover;
-    min-height: 100dvh;
+    min-height: 100svh;
     background-attachment: fixed;
     background-repeat: no-repeat;
     transition: all .3s ease-in-out;
@@ -563,13 +564,14 @@ header .hero h2::before{
 #abaout-us{
     min-height: 100svh;
     background-color: white;
-    padding: 5.5rem 1rem;
+    padding: 3rem 1rem;
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    gap: 50px;
     transition: all .3s ease-in-out;
 }
 
@@ -676,7 +678,7 @@ h2{
 .me{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -685,11 +687,11 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5.5em 1em;
+    justify-content: center;
+    padding: 3rem 1rem;
     background: white;
     color: black;
     opacity: .7;
-    gap: 45px;
     transition: all .3s ease-in-out;
     position: relative;
 }
@@ -726,11 +728,13 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5.5em 1em;
+    justify-content: center;
+    padding: 3rem 1rem;
     background: white;
     color: black;
     gap: 30px;
     transition: all .3s ease-in-out;
+    text-align: center;
 }
 
 .reference-list {
@@ -884,7 +888,8 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5.5em 1em;
+    justify-content: center;
+    padding: 3rem 1rem;
     background: white;
     color: black;
     opacity: .7;
@@ -933,7 +938,7 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 4rem;
+    padding: 3rem 1rem;
 }
 
 .footer-left {
@@ -970,9 +975,11 @@ footer ul li a:hover::after{
 }
 
 
+
 @media screen and (min-width:576px){
-    .wrapper{
-        background-position: top;
+
+    .wrapper .to-the-top-button {
+        animation-delay: calc(var(--scroll) * -8.95s);
     }
 
     nav{
@@ -996,28 +1003,35 @@ footer ul li a:hover::after{
     }
 
     header .hero{
-        gap: 2rem;
+        gap: .7rem;
     }
 
-    .hero h1{
-        font-size: 4.5rem;
-        letter-spacing: 10px;
+    header .hero h1{
+        font-size: 2.2rem;
+    }
+
+    header .hero h2 {
+        font-size: 1rem;
+    }
+
+    .cta-btn{
+        margin-top: 0.5rem;
     }
 
     #abaout-us{
-        padding: 4rem 1rem 1rem 1rem;
-        gap: 10px;
+        gap: 0;
     }
 
     #abaout-us h2{
         font-size: 1.5rem; 
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .me{
         flex-direction: row;
         flex-wrap: nowrap;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        gap: 30px;
     }
 
     .me p{
@@ -1026,7 +1040,8 @@ footer ul li a:hover::after{
 
     #me{
         height: 50vh;
-        width: auto;animation-delay: calc(var(--scroll) * -10s);
+        width: auto;
+        animation-delay: calc(var(--scroll) * -10s);
     }
 
     .services {
@@ -1103,6 +1118,10 @@ footer ul li a:hover::after{
 
 
 @media screen and (min-width:992px){
+    .wrapper .to-the-top-button{
+        animation-delay: calc(var(--scroll) * -6.65s);
+    }
+
     .wrapper .to-the-top-button:hover{
         transform: scale(1.3);
     }
@@ -1245,12 +1264,12 @@ footer ul li a:hover::after{
         right: 10px;
     }
 
-    .hero{
-        gap: 2.8rem;
+    header .hero{
+        gap: 2.5rem;
     }
 
     header .hero h1{
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     header .hero h2{
