@@ -621,15 +621,6 @@ header .hero h2::before{
     }
 }
 
-.cta-btn a:hover{
-    background-color: black;
-    color: white;
-}
-
-.cta-btn a:hover::after{
-    display: none;
-}
-
 h2{
     text-transform: uppercase;
 }
@@ -1283,6 +1274,15 @@ footer ul li a:hover::after{
 
     .cta-btn a{
         transition: all .3s ease-in-out;
+    }
+    
+    .cta-btn a:hover{
+        background-color: black;
+        color: white;
+    }
+    
+    .cta-btn a:hover::after{
+        display: none;
     }
 
     #scroll-down:hover{
