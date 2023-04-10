@@ -1,5 +1,3 @@
-/*CSAK AZ INDEX.HTML ÉS A STYLE.CSS LETT JAVÍTVA, A Z INDEX1.HTML ÉS STYLE1.CSS JAVÍTANDÓ*/
-/*a LANDSCAPE MÓDOT JAVÍTANI KELL! 576PX FELETT*/
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Shadows+Into+Light&display=swap');
 
 *, ::before, ::after{
@@ -328,7 +326,7 @@ a:hover::after{
 
 #theme-select:checked ~ .wrapper{
     background-image: url(../img/office2.jpg);
-    transition: all .3s ease-in-out .3s;
+    /*transition: all .3s ease-in-out .3s;*/
 }
 
 #theme-select:checked ~ .wrapper header .hero h1{
@@ -647,7 +645,7 @@ h2{
     background: transparent;
     border: none;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    /*transition: all .3s ease-in-out;*/
 }
 
 .down{
@@ -945,7 +943,7 @@ footer {
 
 footer h3 {
     margin-bottom: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 footer ul {
@@ -1275,7 +1273,7 @@ footer ul li a:hover::after{
     .cta-btn a{
         transition: all .3s ease-in-out;
     }
-    
+
     .cta-btn a:hover{
         background-color: black;
         color: white;
