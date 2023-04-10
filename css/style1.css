@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Shadows+Into+Light&display=swap');
 
 *, ::before, ::after{
@@ -11,7 +10,7 @@
 .wrapper{
     background-image: url(../img/office1.jpg);
     background-size: cover;
-    min-height: 100dvh;
+    min-height: 100svh;
     background-attachment: fixed;
     background-repeat: no-repeat;
     transition: all .3s ease-in-out;
@@ -100,10 +99,6 @@
     }
 }
 
-.wrapper .to-the-top-button:hover{
-    transform: scale(1.3);
-}
-
 .wrapper .to-the-top-button a{
     padding: 0;
 }
@@ -120,13 +115,12 @@ nav {
     height: 64px;
     position: fixed;
     background-color: white;
-    opacity: .95;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    z-index: 2;
+    z-index: 3;
     transition: all .3s ease-in-out;
     opacity: 1;
 }
@@ -292,7 +286,7 @@ a:hover::after{
     color: white;
 }
 
-#theme-select:checked ~ .wrapper .main{
+#theme-select:checked ~ .wrapper .scroll-down-button{
     background-color: black;
     color: white;
 }
@@ -332,7 +326,7 @@ a:hover::after{
 
 #theme-select:checked ~ .wrapper{
     background-image: url(../img/office2.jpg);
-    transition: all .3s ease-in-out .3s;
+    /*transition: all .3s ease-in-out .3s;*/
 }
 
 #theme-select:checked ~ .wrapper header .hero h1{
@@ -411,11 +405,11 @@ header .menu{
     list-style: none;
     text-align: center;
     position: absolute;
-    width: 50%;
-    height: 100vh;
+    width: 100%;
+    height: 100svh;
     overflow: hidden;
     top: 64px;
-    right: -50%;
+    right: -100%;
     transition: all .3s ease-in-out .3s;
     margin: 0;
     display: flex;
@@ -498,11 +492,12 @@ header .hero{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    font-size: 1em;
+    height: 100svh;
+    font-size: 1rem;
     flex-direction: column;
-    gap: 1.8rem;
+    gap: 3rem;
     text-transform: uppercase;
+    position: relative;
 }
 
 header .hero h1{
@@ -514,7 +509,8 @@ header .hero h1{
     /*background: linear-gradient(black, white);
     background-clip: text;
     -webkit-text-fill-color: transparent;*/
-    font-size: 3.5rem;
+    font-size: 2.6rem;
+    font-weight: bold;
     letter-spacing: 5px;
 }
 
@@ -530,12 +526,12 @@ header .hero h1{
 }
 
 header .hero h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 header .hero p{
     line-height: 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 header .hero h2::before{
@@ -548,9 +544,9 @@ header .hero h2::before{
 @keyframes text{
     0% {content: "-Web Development-";}
     25% {content:"-Web Development-";}
-    50% {content: "-Webdesign-";}
+    50% {content: "-Web Design-";}
     75% {content: "-SEO Optimalization-";}
-    100% {content: "-Online marketing-";}
+    100% {content: "-Online Marketing-";}
 }
 
 .cta-btn{
@@ -558,20 +554,22 @@ header .hero h2::before{
     background-color: white;
     border-radius: 10px;
     cursor: pointer;
-    border: 1px solid;
     box-shadow: 1px 1px 5px black;
+    border: 1px solid;
+    font-weight: bold;
 }
 
 #abaout-us{
-    min-height: 100vh;
+    min-height: 100svh;
     background-color: white;
-    padding: 5.5rem 1rem;
+    padding: 3rem 1rem;
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    gap: 50px;
     transition: all .3s ease-in-out;
 }
 
@@ -595,6 +593,7 @@ header .hero h2::before{
 #abaout-us .slide-in-text{
     position: relative;
     left: -105%;
+    text-align: center;
     animation: slide-in-text 1s linear 1;
     animation-play-state: paused;
     animation-fill-mode: forwards;
@@ -620,35 +619,25 @@ header .hero h2::before{
     }
 }
 
-.cta-btn a:hover{
-    background-color: black;
-    color: white;
-}
-
-.cta-btn a:hover::after{
-    display: none;
-}
-
 h2{
     text-transform: uppercase;
 }
 
-#abaout-us .main {
+.scroll-down-button{
     position: absolute;
     width: 100%;
-    height: 20rem;
     background: white;
     border-radius: 0;
-    top: -60px;
+    bottom: 0;
     left: 0;
-    z-index: -1;
     transition: all .3s ease-in-out;
     display: flex;
     align-items: center;
     flex-direction: column;
+    z-index: 2;
 }
 
-#abaout-us .scroll-down {
+.scroll-down {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -656,46 +645,42 @@ h2{
     background: transparent;
     border: none;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    /*transition: all .3s ease-in-out;*/
 }
 
-#abaout-us .down{
+.down{
     font-size: .8rem;
     cursor: pointer;
 }
 
-#abaout-us #scroll{
+#scroll{
     margin-top: .2rem;
     transition: all .3s ease-in-out;
     padding: 0;
     font-weight: normal;
 }
 
-#abaout-us #scroll::after{
+#scroll::after{
     display: none;
-}
-
-#abaout-us #scroll-down:hover{
-    transform: scale(1.3);
 }
 
 .me{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
 #services{
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5.5em 1em;
+    justify-content: center;
+    padding: 3rem 1rem;
     background: white;
     color: black;
     opacity: .7;
-    gap: 45px;
     transition: all .3s ease-in-out;
     position: relative;
 }
@@ -728,15 +713,17 @@ h2{
 }
 
 #reference{
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5.5em 1em;
+    justify-content: center;
+    padding: 3rem 1rem;
     background: white;
     color: black;
     gap: 30px;
     transition: all .3s ease-in-out;
+    text-align: center;
 }
 
 .reference-list {
@@ -886,11 +873,12 @@ h2{
 }
 
 #contact{
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5.5em 1em;
+    justify-content: center;
+    padding: 3rem 1rem;
     background: white;
     color: black;
     opacity: .7;
@@ -939,7 +927,7 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 4rem;
+    padding: 3rem 1rem;
 }
 
 .footer-left {
@@ -955,7 +943,7 @@ footer {
 
 footer h3 {
     margin-bottom: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 footer ul {
@@ -976,9 +964,11 @@ footer ul li a:hover::after{
 }
 
 
-@media screen and (min-width:811px){
-    .wrapper{
-        background-position: top;
+
+@media screen and (min-width:576px){
+
+    .wrapper .to-the-top-button {
+        animation-delay: calc(var(--scroll) * -8.95s);
     }
 
     nav{
@@ -990,38 +980,48 @@ footer ul li a:hover::after{
     }
 
     header .menu{
-        width: 25%;
-        gap: .5rem;
-        padding-top: 1rem;
+        width: 50%;
+        gap: 0;
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
     .lang{
         top: 30px;
     }
 
-    .hero{
-        font-size: 3em;
+    header .hero{
+        gap: .7rem;
     }
 
-    .hero h1{
-        font-size: 4.5rem;
-        letter-spacing: 10px;
+    header .hero h1{
+        font-size: 2.2rem;
+    }
+
+    header .hero h2 {
+        font-size: 1rem;
+    }
+
+    .cta-btn{
+        margin-top: 0.5rem;
     }
 
     #abaout-us{
-        padding: 4rem 1rem 1rem 1rem;
-        gap: 10px;
+        gap: 0;
     }
 
     #abaout-us h2{
-        font-size: 2rem; 
-        margin-bottom: 2rem;
+        font-size: 1.5rem; 
+        margin-bottom: 1rem;
     }
 
     .me{
         flex-direction: row;
         flex-wrap: nowrap;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        gap: 30px;
     }
 
     .me p{
@@ -1030,7 +1030,8 @@ footer ul li a:hover::after{
 
     #me{
         height: 50vh;
-        width: auto;animation-delay: calc(var(--scroll) * -10s);
+        width: auto;
+        animation-delay: calc(var(--scroll) * -10s);
     }
 
     .services {
@@ -1106,7 +1107,15 @@ footer ul li a:hover::after{
 }
 
 
-@media screen and (min-width:1081px){
+@media screen and (min-width:992px){
+    .wrapper .to-the-top-button{
+        animation-delay: calc(var(--scroll) * -6.65s);
+    }
+
+    .wrapper .to-the-top-button:hover{
+        transform: scale(1.3);
+    }
+
     .menu-btn{
         display: none;
     }
@@ -1121,6 +1130,7 @@ footer ul li a:hover::after{
         transition: all .5s ease-in-out;
         width: 70%;
         right: 20px;
+        display: flex;
 
         background-color: transparent;
         animation-name: nav-scroll;
@@ -1133,8 +1143,8 @@ footer ul li a:hover::after{
     }
     @keyframes nav-scroll{
         0%{background-color: transparent;}
-        14%{background-color: transparent;}
-        17%{background-color: white;}
+        14.8%{background-color: transparent;}
+        15%{background-color: white;}
         100%{background-color: white;}
     }
 
@@ -1161,8 +1171,8 @@ footer ul li a:hover::after{
     }
         @keyframes nav-scroll2{
             0%{background-color: transparent;}
-            17%{background-color: transparent;}
-            22%{background-color: black;}
+            14.8%{background-color: transparent;}
+            15%{background-color: black;}
             100%{background-color: black;}
         }
     
@@ -1244,17 +1254,37 @@ footer ul li a:hover::after{
         right: 10px;
     }
 
-    .hero{
-        gap: 2.8rem;
+    header .hero{
+        gap: 2.5rem;
     }
 
-    .hero h1{
-        font-size: 5.5rem;
-        letter-spacing: 15px;
+    header .hero h1{
+        font-size: 3.5rem;
+    }
+
+    header .hero h2{
+        font-size: 1.5rem;
+    }
+
+    header .hero p{
+        font-size: 1.4rem;
     }
 
     .cta-btn a{
         transition: all .3s ease-in-out;
+    }
+
+    .cta-btn a:hover{
+        background-color: black;
+        color: white;
+    }
+    
+    .cta-btn a:hover::after{
+        display: none;
+    }
+
+    #scroll-down:hover{
+        transform: scale(1.3);
     }
 
     #abaout-us{
