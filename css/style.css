@@ -13,7 +13,7 @@
     min-height: 100svh;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    transition: all .3s ease-in-out;
+    /*transition: all .3s ease-in-out;*/
     position: relative;
     z-index: 0;
     background-position-x: 57%;
@@ -387,9 +387,9 @@ a:hover::after{
     color: white;
 }
 
-#theme-select:checked ~ .wrapper .to-the-top-button:hover{
+/*#theme-select:checked ~ .wrapper .to-the-top-button:hover{
     transform: scale(1.3);
-}
+}*/
 
 #theme-select:checked ~ .wrapper footer{
     background-color: black;
@@ -467,12 +467,12 @@ header nav #menu.active.menu li{
 
 #menu.active.menu .theme{
     opacity: 1;
-    transition: all .3s ease-in-out .3s;
+    transition: opacity .3s ease-in-out .3s;
 }
 
 #menu.active.menu .lang-select{
     opacity: 1; 
-    transition: all .3s ease-in-out .3s; 
+    transition: opacity .3s ease-in-out .3s; 
 }
 
 #menu-btn.active.menu-btn .center-line{
@@ -569,7 +569,7 @@ header .hero h2::before{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 35px;
     transition: all .3s ease-in-out;
 }
 
@@ -630,7 +630,7 @@ h2{
     border-radius: 0;
     bottom: 0;
     left: 0;
-    transition: all .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -645,7 +645,7 @@ h2{
     background: transparent;
     border: none;
     cursor: pointer;
-    /*transition: all .3s ease-in-out;*/
+    transition: .3s ease-in-out;
 }
 
 .down{
@@ -928,6 +928,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding: 4.5rem 1rem;
+    transition: .3s ease-in-out;
 }
 
 .footer-left {
@@ -1116,6 +1117,10 @@ footer ul li a:hover::after{
         transform: scale(1.3);
     }
 
+    #theme-select:checked ~ .wrapper .to-the-top-button:hover{
+        transform: scale(1.3);
+    }
+
     .menu-btn{
         display: none;
     }
@@ -1195,7 +1200,7 @@ footer ul li a:hover::after{
 
     #menu.active.menu .lang-select {
         opacity: 1;
-        transition: all ease-in-out .3s;
+        /*transition: all ease-in-out .3s;*/
     }
 
     #logo::after{
@@ -1283,6 +1288,10 @@ footer ul li a:hover::after{
         display: none;
     }
 
+    .scroll-down-button{
+        transition: none;
+    }
+
     #scroll-down:hover{
         transform: scale(1.3);
     }
@@ -1290,6 +1299,7 @@ footer ul li a:hover::after{
     #abaout-us{
         padding: 6rem 1rem;
         gap: 30px;
+        transition: none;
     }
 
     .me{
@@ -1304,13 +1314,22 @@ footer ul li a:hover::after{
         animation-delay: calc(var(--scroll) * -.2s);
     }
 
+    #services{
+        transition: none;
+    }
+
     .services {
         grid-template-columns:1fr 1fr 1fr;
+    }
+
+    #reference{
+        transition: none;
     }
 
     .reference-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         margin-top: 3rem;
+        transition: none;
     }
 
     .list-item1{
@@ -1369,8 +1388,13 @@ footer ul li a:hover::after{
         100%{right: 0;}
     }
 
+    #contact{
+        transition: none;
+    }
+
     footer{
         flex-direction: row;
+        transition: none;
     }
 
     .footer-center ul{
